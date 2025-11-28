@@ -70,7 +70,6 @@ export default {
 
 <style lang="scss">
 
-@import 'vue-select/src/scss/vue-select.scss';
 @import '@/styles/style-helpers.scss';
 
 .theme-dropdown {
