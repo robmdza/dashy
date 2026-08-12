@@ -94,6 +94,7 @@ module.exports = {
   configureWebpack,
   pages,
   devServer,
+  lintOnSave: false,
   chainWebpack: config => {
     config.module.rules.delete('svg');
     config.cache({
