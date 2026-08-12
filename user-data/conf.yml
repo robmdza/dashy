@@ -26,10 +26,10 @@ appConfig:
   layout: auto
   iconSize: medium
   language: en
-  
+
   # Starting view
   startingView: default
-  
+
   # Authentication (enable and configure below)
   auth:
     enable: true
@@ -37,19 +37,19 @@ appConfig:
       - user: admin
         hash: $2y$12$REPLACE_WITH_YOUR_BCRYPT_HASH
         # Generate hash at: https://bcrypt-generator.com/
-  
+
   # Status checking
   statusCheck: true
   statusCheckInterval: 60
   statusCheckTimeout: 5000
   statusCheckAllowInsecure: false
-  
+
   # Web search
   webSearch:
     disableWebSearch: false
     searchEngine: google
     placeholder: Search the web...
-  
+
   # Widgets - Clock, Weather, System Info, etc.
   widgets:
     - type: clock
@@ -83,7 +83,7 @@ appConfig:
           - title: Server Status
             icon: fas fa-server
             url: https://proxmox.atcalli.link
-  
+
   # UI preferences
   hideErrors: false
   disableConfiguration: false
@@ -91,7 +91,7 @@ appConfig:
   disableUpdateChecks: false
   enableMultiTasking: true
   enableServiceWorker: true
-  
+
   # Privacy
   preventWriteToDisk: false
   preventLocalSave: false
@@ -115,7 +115,7 @@ sections:
         statusCheckAllowInsecure: false
         target: sametab
         keywords: media streaming movies tv shows music
-      
+
       - title: Immich
         description: Self-hosted photo and video backup solution
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/immich.svg
@@ -123,6 +123,62 @@ sections:
         statusCheck: true
         target: sametab
         keywords: photos videos backup gallery
+
+      - title: Piped
+        description: Privacy-friendly YouTube frontend
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/piped.svg
+        url: https://piped.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: youtube alternative video frontend privacy
+
+  # Media Management & Downloads
+  - name: Media Management & Downloads
+    icon: fas fa-download
+    displayData:
+      sortBy: name
+      rows: 2
+      cols: 3
+    items:
+      - title: Sonarr
+        description: TV show and series management
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sonarr.svg
+        url: https://sonarr.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: tv series management automated downloads
+
+      - title: Radarr
+        description: Movie collection management
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/radarr.svg
+        url: https://radarr.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: movies management automated downloads
+
+      - title: Prowlarr
+        description: Torrent and usenet indexer manager
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/prowlarr.svg
+        url: https://prowlarr.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: indexer torrent usenet search
+
+      - title: Transmission
+        description: Lightweight BitTorrent client
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/transmission.svg
+        url: https://transmission.atcalli.link
+        statusCheck: false
+        target: sametab
+        keywords: torrent bittorrent download
+
+      - title: Deluge
+        description: Lightweight torrent client
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/deluge.svg
+        url: http://192.168.3.101:8112
+        statusCheck: true
+        target: sametab
+        keywords: torrent bittorrent download local
 
   # Home Automation & IoT
   - name: Home Automation
@@ -139,7 +195,7 @@ sections:
         statusCheck: true
         target: sametab
         keywords: home automation iot smart home
-      
+
       - title: Nuki Bridge
         description: Smart lock bridge for Nuki devices
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/nuki.svg
@@ -164,7 +220,7 @@ sections:
         statusCheckAllowInsecure: true
         target: sametab
         keywords: virtualization vm containers hypervisor
-      
+
       - title: TrueNAS
         description: Network-attached storage solution
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/truenas.svg
@@ -173,7 +229,7 @@ sections:
         statusCheckAllowInsecure: true
         target: sametab
         keywords: nas storage fileserver zfs
-      
+
       - title: Portainer
         description: Docker container management interface
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/portainer.svg
@@ -182,6 +238,14 @@ sections:
         statusCheckAllowInsecure: true
         target: sametab
         keywords: docker containers management
+
+      - title: Nextcloud
+        description: Self-hosted file sync and share platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/nextcloud.svg
+        url: https://nextcloud.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: files sync cloud productivity self-hosted
 
   # Development & Automation
   - name: Development & Automation
@@ -198,7 +262,7 @@ sections:
         statusCheck: true
         target: sametab
         keywords: ai llm models local ai
-      
+
       - title: n8n
         description: Workflow automation platform
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
@@ -206,7 +270,7 @@ sections:
         statusCheck: true
         target: sametab
         keywords: automation workflow ifttt zapier
-      
+
       - title: n8n MCP
         description: n8n Model Context Protocol server
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
@@ -214,6 +278,70 @@ sections:
         statusCheck: true
         target: sametab
         keywords: mcp model context protocol
+
+      - title: Zep AI Memory
+        description: Long-term memory for AI assistants
+        icon: fas fa-brain
+        url: https://zep.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: ai memory assistants long-term context
+
+  # MCP Services
+  - name: MCP Services
+    icon: fas fa-robot
+    displayData:
+      sortBy: name
+      rows: 2
+      cols: 2
+    items:
+      - title: Stealthy Browser
+        description: Stealth browser automation via MCP
+        icon: fas fa-user-secret
+        url: https://stealthy.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: mcp browser automation stealth
+
+      - title: WebGhosting
+        description: Headless browser control via MCP
+        icon: fas fa-ghost
+        url: https://webghosting.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: mcp browser headless automation
+
+      - title: Stealth Playwright
+        description: Playwright browser testing via MCP
+        icon: fas fa-play
+        url: https://stealth-playwright.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: mcp playwright testing browser
+
+      - title: Cortex Scout
+        description: AI-powered web intelligence via MCP
+        icon: fas fa-compass
+        url: https://cortex-scout.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: mcp ai browser scout intelligence
+
+  # Search & Utilities
+  - name: Search & Utilities
+    icon: fas fa-search
+    displayData:
+      sortBy: name
+      rows: 1
+      cols: 1
+    items:
+      - title: SearXNG
+        description: Privacy-respecting metasearch engine
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/searxng.svg
+        url: http://192.168.3.101:8888
+        statusCheck: true
+        target: sametab
+        keywords: search metasearch privacy local
 
   # Network & Security
   - name: Network & Security
@@ -231,7 +359,7 @@ sections:
         statusCheckAllowInsecure: true
         target: sametab
         keywords: vpn wireguard security tunnel
-      
+
       - title: AdGuard
         description: Network-wide ad blocker and DNS filter
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard.svg
@@ -241,12 +369,12 @@ sections:
         keywords: adblock dns filter privacy
 
   # Storage Solutions
-  - name: Decentralized Storage
+  - name: Storage & Cloud
     icon: fas fa-cloud
     displayData:
       sortBy: name
       rows: 2
-      cols: 2
+      cols: 3
     items:
       - title: Storj
         description: Decentralized cloud storage network
@@ -255,7 +383,7 @@ sections:
         statusCheck: true
         target: sametab
         keywords: storage decentralized cloud blockchain
-      
+
       - title: Sia
         description: Blockchain-based decentralized storage
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sia.svg
@@ -263,6 +391,14 @@ sections:
         statusCheck: true
         target: sametab
         keywords: sia blockchain storage decentralized
+
+      - title: Obsidian Sync
+        description: Obsidian notes sync backend
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/obsidian.svg
+        url: https://obsidian.atcalli.link
+        statusCheck: true
+        target: sametab
+        keywords: obsidian notes sync couchdb
 
   # Dashboards & Monitoring
   - name: Dashboards
@@ -279,6 +415,14 @@ sections:
         statusCheck: true
         target: sametab
         keywords: dashboard homepage launcher
+
+      - title: Homarr
+        description: Multi-board application dashboard
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/homarr.svg
+        url: http://192.168.3.101:7575
+        statusCheck: true
+        target: sametab
+        keywords: dashboard homepage launcher boards
 
 # Optional: Additional pages for multi-page support
 # Uncomment and configure if you want separate pages
