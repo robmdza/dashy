@@ -30,13 +30,9 @@ appConfig:
   # Starting view
   startingView: default
 
-  # Authentication (enable and configure below)
+  # Authentication (disabled temporarily for visual verification)
   auth:
-    enable: true
-    users:
-      - user: admin
-        hash: $2y$12$REPLACE_WITH_YOUR_BCRYPT_HASH
-        # Generate hash at: https://bcrypt-generator.com/
+    enable: false
 
   # Status checking
   statusCheck: true
