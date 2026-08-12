@@ -89,7 +89,7 @@ appConfig:
   disableSmartSort: false
   disableUpdateChecks: false
   enableMultiTasking: true
-  enableServiceWorker: true
+  enableServiceWorker: false
 
   # Privacy
   preventWriteToDisk: false
