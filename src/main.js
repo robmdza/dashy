@@ -49,6 +49,7 @@ const i18n = new VueI18n({
 });
 
 // Checks if service worker not disable, and if so will registers it
+// Modified 2026-08-13 to force a fresh bundle build for Netlify deploy
 serviceWorker();
 
 // Checks if user enabled error reporting, and if so will initialize it
