@@ -11,13 +11,10 @@ pageInfo:
   navLinks:
     - title: GitHub
       path: https://github.com/Lissy93/dashy
-      icon: fab fa-github
     - title: Documentation
       path: https://dashy.to/docs
-      icon: fas fa-book
     - title: Issues
       path: https://github.com/Lissy93/dashy/issues
-      icon: fas fa-bug
 
 # Application configuration
 appConfig:
@@ -32,59 +29,21 @@ appConfig:
 
   # Authentication (username: admin, password: admin)
   auth:
-    enable: true
     users:
       - user: admin
         hash: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+        type: admin
 
   # Status checking
   statusCheck: true
   statusCheckInterval: 60
-  statusCheckTimeout: 5000
-  statusCheckAllowInsecure: false
 
   # Web search
   webSearch:
     disableWebSearch: false
     searchEngine: google
-    placeholder: Search the web...
-
-  # Widgets - Clock, Weather, System Info, etc.
-  widgets:
-    - type: clock
-      options:
-        format: 'HH:mm:ss'
-        timezone: auto
-        showDate: true
-        showSeconds: true
-    - type: weather
-      options:
-        location: auto
-        units: metric
-        provider: openweathermap
-        apiKey: REPLACE_WITH_OPENWEATHER_API_KEY
-    - type: system-info
-      options:
-        showHost: true
-        showOS: true
-        showKernel: true
-        showUptime: true
-    - type: search
-      options:
-        provider: google
-        placeholder: Search the web...
-    - type: quick-links
-      options:
-        links:
-          - title: Caddy Config
-            icon: fas fa-file-code
-            url: https://github.com/your-repo
-          - title: Server Status
-            icon: fas fa-server
-            url: https://proxmox.atcalli.link
 
   # UI preferences
-  hideErrors: false
   disableConfiguration: false
   disableSmartSort: false
   disableUpdateChecks: false
@@ -94,7 +53,6 @@ appConfig:
   # Privacy
   preventWriteToDisk: false
   preventLocalSave: false
-  preventConfigSync: false
 
 # Main content - Sections and items
 sections:
@@ -102,7 +60,7 @@ sections:
   - name: Media & Entertainment
     icon: fas fa-film
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 4
     items:
@@ -113,7 +71,7 @@ sections:
         statusCheck: true
         statusCheckAllowInsecure: false
         target: sametab
-        keywords: media streaming movies tv shows music
+        tags: [media, streaming, movies, tv, shows, music]
 
       - title: Immich
         description: Self-hosted photo and video backup solution
@@ -121,7 +79,7 @@ sections:
         url: https://immich.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: photos videos backup gallery
+        tags: [photos, videos, backup, gallery]
 
       - title: Piped
         description: Privacy-friendly YouTube frontend
@@ -129,13 +87,13 @@ sections:
         url: https://piped.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: youtube alternative video frontend privacy
+        tags: [youtube, alternative, video, frontend, privacy]
 
   # Media Management & Downloads
   - name: Media Management & Downloads
     icon: fas fa-download
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 3
     items:
@@ -145,7 +103,7 @@ sections:
         url: https://sonarr.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: tv series management automated downloads
+        tags: [tv, series, management, automated, downloads]
 
       - title: Radarr
         description: Movie collection management
@@ -153,7 +111,7 @@ sections:
         url: https://radarr.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: movies management automated downloads
+        tags: [movies, management, automated, downloads]
 
       - title: Prowlarr
         description: Torrent and usenet indexer manager
@@ -161,7 +119,7 @@ sections:
         url: https://prowlarr.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: indexer torrent usenet search
+        tags: [indexer, torrent, usenet, search]
 
       - title: Transmission
         description: Lightweight BitTorrent client
@@ -169,7 +127,7 @@ sections:
         url: https://transmission.atcalli.link
         statusCheck: false
         target: sametab
-        keywords: torrent bittorrent download
+        tags: [torrent, bittorrent, download]
 
       - title: Deluge
         description: Lightweight torrent client
@@ -177,13 +135,13 @@ sections:
         url: http://192.168.3.101:8112
         statusCheck: true
         target: sametab
-        keywords: torrent bittorrent download local
+        tags: [torrent, bittorrent, download, local]
 
   # Home Automation & IoT
   - name: Home Automation
     icon: fas fa-home
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 3
     items:
@@ -193,7 +151,7 @@ sections:
         url: https://ha.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: home automation iot smart home
+        tags: [home, automation, iot, smart, home]
 
       - title: Nuki Bridge
         description: Smart lock bridge for Nuki devices
@@ -201,13 +159,13 @@ sections:
         url: https://nukibridge.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: smart lock nuki bridge
+        tags: [smart, lock, nuki, bridge]
 
   # Infrastructure & Virtualization
   - name: Infrastructure
     icon: fas fa-server
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 3
     items:
@@ -218,7 +176,7 @@ sections:
         statusCheck: true
         statusCheckAllowInsecure: true
         target: sametab
-        keywords: virtualization vm containers hypervisor
+        tags: [virtualization, vm, containers, hypervisor]
 
       - title: TrueNAS
         description: Network-attached storage solution
@@ -227,7 +185,7 @@ sections:
         statusCheck: true
         statusCheckAllowInsecure: true
         target: sametab
-        keywords: nas storage fileserver zfs
+        tags: [nas, storage, fileserver, zfs]
 
       - title: Portainer
         description: Docker container management interface
@@ -236,7 +194,7 @@ sections:
         statusCheck: true
         statusCheckAllowInsecure: true
         target: sametab
-        keywords: docker containers management
+        tags: [docker, containers, management]
 
       - title: Nextcloud
         description: Self-hosted file sync and share platform
@@ -244,13 +202,13 @@ sections:
         url: https://nextcloud.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: files sync cloud productivity self-hosted
+        tags: [files, sync, cloud, productivity, self-hosted]
 
   # Development & Automation
   - name: Development & Automation
     icon: fas fa-code
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 3
     items:
@@ -260,7 +218,7 @@ sections:
         url: https://ollama.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: ai llm models local ai
+        tags: [ai, llm, models, local, ai]
 
       - title: n8n
         description: Workflow automation platform
@@ -268,7 +226,7 @@ sections:
         url: https://n8n.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: automation workflow ifttt zapier
+        tags: [automation, workflow, ifttt, zapier]
 
       - title: n8n MCP
         description: n8n Model Context Protocol server
@@ -276,7 +234,7 @@ sections:
         url: https://mcp-n8n.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: mcp model context protocol
+        tags: [mcp, model, context, protocol]
 
       - title: Zep AI Memory
         description: Long-term memory for AI assistants
@@ -284,13 +242,13 @@ sections:
         url: https://zep.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: ai memory assistants long-term context
+        tags: [ai, memory, assistants, long-term, context]
 
   # MCP Services
   - name: MCP Services
     icon: fas fa-robot
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 2
     items:
@@ -300,7 +258,7 @@ sections:
         url: https://stealthy.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: mcp browser automation stealth
+        tags: [mcp, browser, automation, stealth]
 
       - title: WebGhosting
         description: Headless browser control via MCP
@@ -308,7 +266,7 @@ sections:
         url: https://webghosting.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: mcp browser headless automation
+        tags: [mcp, browser, headless, automation]
 
       - title: Stealth Playwright
         description: Playwright browser testing via MCP
@@ -316,7 +274,7 @@ sections:
         url: https://stealth-playwright.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: mcp playwright testing browser
+        tags: [mcp, playwright, testing, browser]
 
       - title: Cortex Scout
         description: AI-powered web intelligence via MCP
@@ -324,13 +282,13 @@ sections:
         url: https://cortex-scout.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: mcp ai browser scout intelligence
+        tags: [mcp, ai, browser, scout, intelligence]
 
   # Search & Utilities
   - name: Search & Utilities
     icon: fas fa-search
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 1
       cols: 1
     items:
@@ -340,13 +298,13 @@ sections:
         url: http://192.168.3.101:8888
         statusCheck: true
         target: sametab
-        keywords: search metasearch privacy local
+        tags: [search, metasearch, privacy, local]
 
   # Network & Security
   - name: Network & Security
     icon: fas fa-shield-alt
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 3
     items:
@@ -357,7 +315,7 @@ sections:
         statusCheck: true
         statusCheckAllowInsecure: true
         target: sametab
-        keywords: vpn wireguard security tunnel
+        tags: [vpn, wireguard, security, tunnel]
 
       - title: AdGuard
         description: Network-wide ad blocker and DNS filter
@@ -365,13 +323,13 @@ sections:
         url: https://adguard.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: adblock dns filter privacy
+        tags: [adblock, dns, filter, privacy]
 
   # Storage Solutions
   - name: Storage & Cloud
     icon: fas fa-cloud
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 2
       cols: 3
     items:
@@ -381,7 +339,7 @@ sections:
         url: https://storj.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: storage decentralized cloud blockchain
+        tags: [storage, decentralized, cloud, blockchain]
 
       - title: Sia
         description: Blockchain-based decentralized storage
@@ -389,7 +347,7 @@ sections:
         url: https://sia.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: sia blockchain storage decentralized
+        tags: [sia, blockchain, storage, decentralized]
 
       - title: Obsidian Sync
         description: Obsidian notes sync backend
@@ -397,13 +355,13 @@ sections:
         url: https://obsidian.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: obsidian notes sync couchdb
+        tags: [obsidian, notes, sync, couchdb]
 
   # Dashboards & Monitoring
   - name: Dashboards
     icon: fas fa-chart-line
     displayData:
-      sortBy: name
+      sortBy: alphabetical
       rows: 1
       cols: 2
     items:
@@ -413,7 +371,7 @@ sections:
         url: https://heimdall.atcalli.link
         statusCheck: true
         target: sametab
-        keywords: dashboard homepage launcher
+        tags: [dashboard, homepage, launcher]
 
       - title: Homarr
         description: Multi-board application dashboard
@@ -421,7 +379,7 @@ sections:
         url: http://192.168.3.101:7575
         statusCheck: true
         target: sametab
-        keywords: dashboard homepage launcher boards
+        tags: [dashboard, homepage, launcher, boards]
 
 # Optional: Additional pages for multi-page support
 # Uncomment and configure if you want separate pages
