@@ -137,14 +137,36 @@ sections:
         target: sametab
         tags: [torrent, bittorrent, download, local]
 
-  # Home Automation & IoT
-  - name: Home Automation
-    icon: fas fa-home
+  # Home Automation & IoT (moved to Caddy-Proxied Services)
+  # Infrastructure & Virtualization (moved to Caddy-Proxied Services)
+  # Development & Automation (moved to Caddy-Proxied Services)
+  # MCP Services (moved to Caddy-Proxied Services)
+  # Search & Utilities (moved to Local Network Services)
+
+  # Caddy-Proxied Services (via atcalli.link domains)
+  - name: Caddy-Proxied Services
+    icon: fas fa-cloud
     displayData:
       sortBy: alphabetical
-      rows: 2
-      cols: 3
+      rows: 3
+      cols: 4
     items:
+      - title: WireGuard
+        description: Fast and secure VPN tunnel
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/wireguard.svg
+        url: https://wg.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [vpn, wireguard, security, tunnel]
+
+      - title: AdGuard
+        description: Network-wide ad blocker and DNS filter
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard.svg
+        url: https://adguard.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [adblock, dns, filter, privacy]
+
       - title: Home Assistant
         description: Open source home automation platform
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/home-assistant.svg
@@ -161,20 +183,11 @@ sections:
         target: sametab
         tags: [smart, lock, nuki, bridge]
 
-  # Infrastructure & Virtualization
-  - name: Infrastructure
-    icon: fas fa-server
-    displayData:
-      sortBy: alphabetical
-      rows: 2
-      cols: 3
-    items:
       - title: Proxmox
         description: Virtualization management platform
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/proxmox.svg
         url: https://proxmox.atcalli.link
         statusCheck: true
-        statusCheckAllowInsecure: true
         target: sametab
         tags: [virtualization, vm, containers, hypervisor]
 
@@ -183,7 +196,6 @@ sections:
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/truenas.svg
         url: https://truenas.atcalli.link
         statusCheck: true
-        statusCheckAllowInsecure: true
         target: sametab
         tags: [nas, storage, fileserver, zfs]
 
@@ -192,7 +204,6 @@ sections:
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/portainer.svg
         url: https://portainer.atcalli.link
         statusCheck: true
-        statusCheckAllowInsecure: true
         target: sametab
         tags: [docker, containers, management]
 
@@ -204,14 +215,6 @@ sections:
         target: sametab
         tags: [files, sync, cloud, productivity, self-hosted]
 
-  # Development & Automation
-  - name: Development & Automation
-    icon: fas fa-code
-    displayData:
-      sortBy: alphabetical
-      rows: 2
-      cols: 3
-    items:
       - title: Ollama
         description: Local AI model runner and API
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/ollama.svg
@@ -244,14 +247,6 @@ sections:
         target: sametab
         tags: [ai, memory, assistants, long-term, context]
 
-  # MCP Services
-  - name: MCP Services
-    icon: fas fa-robot
-    displayData:
-      sortBy: alphabetical
-      rows: 2
-      cols: 2
-    items:
       - title: Stealthy Browser
         description: Stealth browser automation via MCP
         icon: fas fa-user-secret
@@ -284,55 +279,14 @@ sections:
         target: sametab
         tags: [mcp, ai, browser, scout, intelligence]
 
-  # Search & Utilities
-  - name: Search & Utilities
-    icon: fas fa-search
-    displayData:
-      sortBy: alphabetical
-      rows: 1
-      cols: 1
-    items:
       - title: SearXNG
         description: Privacy-respecting metasearch engine
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/searxng.svg
-        url: http://192.168.3.101:8888
+        url: https://searxng.atcalli.link
         statusCheck: true
         target: sametab
-        tags: [search, metasearch, privacy, local]
+        tags: [search, metasearch, privacy]
 
-  # Network & Security
-  - name: Network & Security
-    icon: fas fa-shield-alt
-    displayData:
-      sortBy: alphabetical
-      rows: 2
-      cols: 3
-    items:
-      - title: WireGuard
-        description: Fast and secure VPN tunnel
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/wireguard.svg
-        url: https://wg.atcalli.link
-        statusCheck: true
-        statusCheckAllowInsecure: true
-        target: sametab
-        tags: [vpn, wireguard, security, tunnel]
-
-      - title: AdGuard
-        description: Network-wide ad blocker and DNS filter
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard.svg
-        url: https://adguard.atcalli.link
-        statusCheck: true
-        target: sametab
-        tags: [adblock, dns, filter, privacy]
-
-  # Storage Solutions
-  - name: Storage & Cloud
-    icon: fas fa-cloud
-    displayData:
-      sortBy: alphabetical
-      rows: 2
-      cols: 3
-    items:
       - title: Storj
         description: Decentralized cloud storage network
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/storj.svg
@@ -357,14 +311,6 @@ sections:
         target: sametab
         tags: [obsidian, notes, sync, couchdb]
 
-  # Dashboards & Monitoring
-  - name: Dashboards
-    icon: fas fa-chart-line
-    displayData:
-      sortBy: alphabetical
-      rows: 1
-      cols: 2
-    items:
       - title: Heimdall
         description: Application dashboard and homepage
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/heimdall.svg
@@ -373,13 +319,40 @@ sections:
         target: sametab
         tags: [dashboard, homepage, launcher]
 
+  # Local Network Services (direct IP access)
+  - name: Local Network Services
+    icon: fas fa-network-wired
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 3
+    items:
       - title: Homarr
         description: Multi-board application dashboard
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/homarr.svg
         url: http://192.168.3.101:7575
         statusCheck: true
         target: sametab
-        tags: [dashboard, homepage, launcher, boards]
+        tags: [dashboard, homepage, launcher, boards, local]
+
+      - title: Deluge
+        description: Lightweight torrent client
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/deluge.svg
+        url: http://192.168.3.101:8112
+        statusCheck: true
+        target: sametab
+        tags: [torrent, bittorrent, download, local]
+
+      - title: SearXNG (Local)
+        description: Privacy-respecting metasearch engine (local instance)
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/searxng.svg
+        url: http://192.168.3.101:8888
+        statusCheck: true
+        target: sametab
+        tags: [search, metasearch, privacy, local]
+
+  # Storage Solutions (moved to Caddy-Proxied Services)
+  # Dashboards & Monitoring (Heimdall moved to Caddy-Proxied, Homarr moved to Local Network Services)
 
 # Optional: Additional pages for multi-page support
 # Uncomment and configure if you want separate pages
