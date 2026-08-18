@@ -137,14 +137,168 @@ sections:
         target: sametab
         tags: [torrent, bittorrent, download, local]
 
-  # Home Automation & IoT (moved to Caddy-Proxied Services)
-  # Infrastructure & Virtualization (moved to Caddy-Proxied Services)
-  # Development & Automation (moved to Caddy-Proxied Services)
-  # MCP Services (moved to Caddy-Proxied Services)
-  # Search & Utilities (moved to Local Network Services)
+  # Home Automation & IoT
+  - name: Home Automation
+    icon: fas fa-home
+    displayData:
+      sortBy: alphabetical
+      rows: 2
+      cols: 3
+    items:
+      - title: Home Assistant
+        description: Open source home automation platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/home-assistant.svg
+        url: https://ha.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [home, automation, iot, smart, home]
 
-  # Caddy-Proxied Services (via atcalli.link domains)
-  - name: Caddy-Proxied Services
+      - title: Nuki Bridge
+        description: Smart lock bridge for Nuki devices
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/nuki.svg
+        url: https://nukibridge.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [smart, lock, nuki, bridge]
+
+  # Infrastructure & Virtualization
+  - name: Infrastructure
+    icon: fas fa-server
+    displayData:
+      sortBy: alphabetical
+      rows: 2
+      cols: 3
+    items:
+      - title: Proxmox
+        description: Virtualization management platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/proxmox.svg
+        url: https://proxmox.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [virtualization, vm, containers, hypervisor]
+
+      - title: TrueNAS
+        description: Network-attached storage solution
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/truenas.svg
+        url: https://truenas.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [nas, storage, fileserver, zfs]
+
+      - title: Portainer
+        description: Docker container management interface
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/portainer.svg
+        url: https://portainer.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [docker, containers, management]
+
+      - title: Nextcloud
+        description: Self-hosted file sync and share platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/nextcloud.svg
+        url: https://nextcloud.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [files, sync, cloud, productivity, self-hosted]
+
+  # Development & Automation
+  - name: Development & Automation
+    icon: fas fa-code
+    displayData:
+      sortBy: alphabetical
+      rows: 2
+      cols: 3
+    items:
+      - title: Ollama
+        description: Local AI model runner and API
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/ollama.svg
+        url: https://ollama.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [ai, llm, models, local, ai]
+
+      - title: n8n
+        description: Workflow automation platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
+        url: https://n8n.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [automation, workflow, ifttt, zapier]
+
+      - title: n8n MCP
+        description: n8n Model Context Protocol server
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
+        url: https://mcp-n8n.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [mcp, model, context, protocol]
+
+      - title: Zep AI Memory
+        description: Long-term memory for AI assistants
+        icon: fas fa-brain
+        url: https://zep.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [ai, memory, assistants, long-term, context]
+
+  # MCP Services
+  - name: MCP Services
+    icon: fas fa-robot
+    displayData:
+      sortBy: alphabetical
+      rows: 2
+      cols: 2
+    items:
+      - title: Stealthy Browser
+        description: Stealth browser automation via MCP
+        icon: fas fa-user-secret
+        url: https://stealthy.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [mcp, browser, automation, stealth]
+
+      - title: WebGhosting
+        description: Headless browser control via MCP
+        icon: fas fa-ghost
+        url: https://webghosting.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [mcp, browser, headless, automation]
+
+      - title: Stealth Playwright
+        description: Playwright browser testing via MCP
+        icon: fas fa-play
+        url: https://stealth-playwright.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [mcp, playwright, testing, browser]
+
+      - title: Cortex Scout
+        description: AI-powered web intelligence via MCP
+        icon: fas fa-compass
+        url: https://cortex-scout.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [mcp, ai, browser, scout, intelligence]
+
+  # Search & Utilities
+  - name: Search & Utilities
+    icon: fas fa-search
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+    items:
+      - title: SearXNG
+        description: Privacy-respecting metasearch engine
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/searxng.svg
+        url: http://192.168.3.101:8888
+        statusCheck: true
+        target: sametab
+        tags: [search, metasearch, privacy, local]
+
+  # Internet Access (via Caddy-proxied atcalli.link domains)
+  - name: Internet Access
     icon: fas fa-cloud
     displayData:
       sortBy: alphabetical
@@ -319,8 +473,8 @@ sections:
         target: sametab
         tags: [dashboard, homepage, launcher]
 
-  # Local Network Services (direct IP access)
-  - name: Local Network Services
+  # Local Access (direct IP access)
+  - name: Local Access
     icon: fas fa-network-wired
     displayData:
       sortBy: alphabetical
@@ -351,8 +505,61 @@ sections:
         target: sametab
         tags: [search, metasearch, privacy, local]
 
-  # Storage Solutions (moved to Caddy-Proxied Services)
-  # Dashboards & Monitoring (Heimdall moved to Caddy-Proxied, Homarr moved to Local Network Services)
+  # Storage Solutions
+  - name: Storage & Cloud
+    icon: fas fa-cloud
+    displayData:
+      sortBy: alphabetical
+      rows: 2
+      cols: 3
+    items:
+      - title: Storj
+        description: Decentralized cloud storage network
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/storj.svg
+        url: https://storj.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [storage, decentralized, cloud, blockchain]
+
+      - title: Sia
+        description: Blockchain-based decentralized storage
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sia.svg
+        url: https://sia.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [sia, blockchain, storage, decentralized]
+
+      - title: Obsidian Sync
+        description: Obsidian notes sync backend
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/obsidian.svg
+        url: https://obsidian.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [obsidian, notes, sync, couchdb]
+
+  # Dashboards & Monitoring
+  - name: Dashboards
+    icon: fas fa-chart-line
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 2
+    items:
+      - title: Heimdall
+        description: Application dashboard and homepage
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/heimdall.svg
+        url: https://heimdall.atcalli.link
+        statusCheck: true
+        target: sametab
+        tags: [dashboard, homepage, launcher]
+
+      - title: Homarr
+        description: Multi-board application dashboard
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/homarr.svg
+        url: http://192.168.3.101:7575
+        statusCheck: true
+        target: sametab
+        tags: [dashboard, homepage, launcher, boards]
 
 # Optional: Additional pages for multi-page support
 # Uncomment and configure if you want separate pages
