@@ -69,7 +69,6 @@ sections:
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/jellyfin.svg
         url: https://jellyfin.atcalli.link
         statusCheck: true
-        statusCheckAllowInsecure: false
         target: sametab
         tags: [media, streaming, movies, tv, shows, music]
 
@@ -473,21 +472,53 @@ sections:
         target: sametab
         tags: [dashboard, homepage, launcher]
 
-  # Local Access (direct IP access)
+  # Local Access (direct IP access from LAN)
   - name: Local Access
     icon: fas fa-network-wired
     displayData:
       sortBy: alphabetical
-      rows: 1
-      cols: 3
+      rows: 2
+      cols: 4
     items:
-      - title: Homarr
-        description: Multi-board application dashboard
-        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/homarr.svg
-        url: http://192.168.3.101:7575
+      - title: Jellyfin
+        description: Media streaming server
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/jellyfin.svg
+        url: http://192.168.3.101:8096
         statusCheck: true
         target: sametab
-        tags: [dashboard, homepage, launcher, boards, local]
+        tags: [media, streaming, movies, tv, shows, music, local]
+
+      - title: Sonarr
+        description: TV show and series management
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sonarr.svg
+        url: http://192.168.3.101:8989
+        statusCheck: true
+        target: sametab
+        tags: [tv, series, management, automated, downloads, local]
+
+      - title: Radarr
+        description: Movie collection management
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/radarr.svg
+        url: http://192.168.3.101:7878
+        statusCheck: true
+        target: sametab
+        tags: [movies, management, automated, downloads, local]
+
+      - title: Prowlarr
+        description: Torrent and usenet indexer manager
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/prowlarr.svg
+        url: http://192.168.3.101:9696
+        statusCheck: true
+        target: sametab
+        tags: [indexer, torrent, usenet, search, local]
+
+      - title: Transmission
+        description: Lightweight BitTorrent client
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/transmission.svg
+        url: http://192.168.3.101:9091
+        statusCheck: true
+        target: sametab
+        tags: [torrent, bittorrent, download, local]
 
       - title: Deluge
         description: Lightweight torrent client
@@ -497,13 +528,37 @@ sections:
         target: sametab
         tags: [torrent, bittorrent, download, local]
 
-      - title: SearXNG (Local)
-        description: Privacy-respecting metasearch engine (local instance)
+      - title: n8n
+        description: Workflow automation platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
+        url: http://192.168.3.101:5678
+        statusCheck: true
+        target: sametab
+        tags: [automation, workflow, ifttt, zapier, local]
+
+      - title: SearXNG
+        description: Privacy-respecting metasearch engine
         icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/searxng.svg
         url: http://192.168.3.101:8888
         statusCheck: true
         target: sametab
         tags: [search, metasearch, privacy, local]
+
+      - title: Homarr
+        description: Multi-board application dashboard
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/homarr.svg
+        url: http://192.168.3.101:7575
+        statusCheck: true
+        target: sametab
+        tags: [dashboard, homepage, launcher, boards, local]
+
+      - title: AdGuard
+        description: Network-wide ad blocker and DNS filter
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard.svg
+        url: http://192.168.3.101:80
+        statusCheck: true
+        target: sametab
+        tags: [adblock, dns, filter, privacy, local]
 
   # Storage Solutions
   - name: Storage & Cloud
@@ -560,16 +615,3 @@ sections:
         statusCheck: true
         target: sametab
         tags: [dashboard, homepage, launcher, boards]
-
-# Optional: Additional pages for multi-page support
-# Uncomment and configure if you want separate pages
-# pages:
-#   - name: Home
-#     icon: fas fa-home
-#     path: /
-#   - name: Media
-#     icon: fas fa-film
-#     path: /media
-#   - name: Infrastructure
-#     icon: fas fa-server
-#     path: /infrastructure
