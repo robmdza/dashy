@@ -1,0 +1,198 @@
+---
+# Local Access Page - Direct LAN IP access
+pageInfo:
+  title: Local Access
+  description: Direct LAN IP access to self-hosted services
+  icon: fas fa-network-wired
+
+sections:
+  - name: Local Access
+    icon: fas fa-network-wired
+    displayData:
+      sortBy: alphabetical
+      rows: 3
+      cols: 4
+    items:
+      - title: AdGuard
+        description: Network-wide ad blocker and DNS filter
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/adguard.svg
+        url: http://192.168.3.101:80
+        statusCheck: true
+        target: sametab
+        tags: [adblock, dns, filter, privacy, local, ubuntu-server]
+
+      - title: Cortex Scout
+        description: AI-powered web intelligence via MCP
+        icon: fas fa-compass
+        url: http://192.168.3.101:3005
+        statusCheck: true
+        target: sametab
+        tags: [mcp, ai, browser, scout, intelligence, local, ubuntu-server]
+
+      - title: Deluge
+        description: Lightweight torrent client
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/deluge.svg
+        url: http://192.168.3.101:8112
+        statusCheck: true
+        target: sametab
+        tags: [torrent, bittorrent, download, local, ubuntu-server]
+
+      - title: Heimdall
+        description: Application dashboard and homepage
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/heimdall.svg
+        url: http://192.168.3.101:8082
+        statusCheck: true
+        target: sametab
+        tags: [dashboard, homepage, launcher, local, ubuntu-server]
+
+      - title: Homarr
+        description: Multi-board application dashboard
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/homarr.svg
+        url: http://192.168.3.101:7575
+        statusCheck: true
+        target: sametab
+        tags: [dashboard, homepage, launcher, boards, local, ubuntu-server]
+
+      - title: Home Assistant
+        description: Open source home automation platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/home-assistant.svg
+        url: http://192.168.3.101:8123
+        statusCheck: true
+        target: sametab
+        tags: [home, automation, iot, smart, home, local, ubuntu-server]
+
+      - title: Immich
+        description: Self-hosted photo and video backup solution
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/immich.svg
+        url: http://192.168.3.101:2283
+        statusCheck: true
+        target: sametab
+        tags: [photos, videos, backup, gallery, local, ubuntu-server]
+
+      - title: Jellyfin
+        description: Media streaming server
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/jellyfin.svg
+        url: http://192.168.3.101:8096
+        statusCheck: true
+        target: sametab
+        tags: [media, streaming, movies, tv, shows, music, local, ubuntu-server]
+
+      - title: n8n
+        description: Workflow automation platform
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
+        url: http://192.168.3.101:5678
+        statusCheck: true
+        target: sametab
+        tags: [automation, workflow, ifttt, zapier, local, ubuntu-server]
+
+      - title: n8n MCP
+        description: n8n Model Context Protocol server
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/n8n.svg
+        url: http://192.168.3.101:3001
+        statusCheck: true
+        target: sametab
+        tags: [mcp, model, context, protocol, local, ubuntu-server]
+
+      - title: Nuki Bridge
+        description: Smart lock bridge for Nuki devices
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/nuki.svg
+        url: http://192.168.3.101:8081
+        statusCheck: true
+        target: sametab
+        tags: [smart, lock, nuki, bridge, local, ubuntu-server]
+
+      - title: Ollama
+        description: Local AI model runner and API
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/ollama.svg
+        url: http://192.168.3.101:11434
+        statusCheck: true
+        target: sametab
+        tags: [ai, llm, models, local, ai, local, ubuntu-server]
+
+      - title: Piped
+        description: Privacy-friendly YouTube frontend
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/piped.svg
+        url: http://192.168.3.101:8080
+        statusCheck: true
+        target: sametab
+        tags: [youtube, alternative, video, frontend, privacy, local, ubuntu-server]
+
+      - title: Portainer
+        description: Docker container management interface
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/portainer.svg
+        url: http://192.168.3.101:9443
+        statusCheck: true
+        target: sametab
+        tags: [docker, containers, management, local, ubuntu-server]
+
+      - title: Prowlarr
+        description: Torrent and usenet indexer manager
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/prowlarr.svg
+        url: http://192.168.3.101:9696
+        statusCheck: true
+        target: sametab
+        tags: [indexer, torrent, usenet, search, local, ubuntu-server]
+
+      - title: Radarr
+        description: Movie collection management
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/radarr.svg
+        url: http://192.168.3.101:7878
+        statusCheck: true
+        target: sametab
+        tags: [movies, management, automated, downloads, local, ubuntu-server]
+
+      - title: SearXNG
+        description: Privacy-respecting metasearch engine
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/searxng.svg
+        url: http://192.168.3.101:8888
+        statusCheck: true
+        target: sametab
+        tags: [search, metasearch, privacy, local, ubuntu-server]
+
+      - title: Sonarr
+        description: TV show and series management
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/sonarr.svg
+        url: http://192.168.3.101:8989
+        statusCheck: true
+        target: sametab
+        tags: [tv, series, management, automated, downloads, local, ubuntu-server]
+
+      - title: Stealth Playwright
+        description: Playwright browser testing via MCP
+        icon: fas fa-play
+        url: http://192.168.3.101:3004
+        statusCheck: true
+        target: sametab
+        tags: [mcp, playwright, testing, browser, local, ubuntu-server]
+
+      - title: Stealthy Browser
+        description: Stealth browser automation via MCP
+        icon: fas fa-user-secret
+        url: http://192.168.3.101:3002
+        statusCheck: true
+        target: sametab
+        tags: [mcp, browser, automation, stealth, local, ubuntu-server]
+
+      - title: Transmission
+        description: Lightweight BitTorrent client
+        icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/transmission.svg
+        url: http://192.168.3.101:9091
+        statusCheck: true
+        target: sametab
+        tags: [torrent, bittorrent, download, local, ubuntu-server]
+
+      - title: WebGhosting
+        description: Headless browser control via MCP
+        icon: fas fa-ghost
+        url: http://192.168.3.101:3003
+        statusCheck: true
+        target: sametab
+        tags: [mcp, browser, headless, automation, local, ubuntu-server]
+
+      - title: Zep AI Memory
+        description: Long-term memory for AI assistants
+        icon: fas fa-brain
+        url: http://192.168.3.101:8000
+        statusCheck: true
+        target: sametab
+        tags: [ai, memory, assistants, long-term, context, local, ubuntu-server]
